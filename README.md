@@ -1,1 +1,4 @@
-# griberg
+Griberg is a R+Shiny script which allows to plot the latest available meteorological data produced by Arpae Emilia Romagna in grib format. The script is just an example of how to retrieve the available data and visualize it. It can easily be modified. The scripts actually downloads the latest available grib data files from the official repository at: https://drive.google.com/drive/folders/0B7KLnPu6vjdPVGJKR3E4SEluU0U. In order to list the contents of the Gdrive folder a login it's requested. To avoid it, oauth is implemented in the very first lines of code, but the secrets are omitted from this public release. You have to edit the following lines with your personal strings from Google:
+google_app <- httr::oauth_app("somename",
+                              key = "yourkey.apps.googleusercontent.com",
+                              secret = "yoursecret")
